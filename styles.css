@@ -1,0 +1,186 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+/* Navigation */
+nav {
+    margin: 20px 0;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #2980B9;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #3498DB;
+    color: white;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ECF0F1;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: left;
+}
+
+.dropdown-content a {
+    color: #2980B9;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.menu li:hover .dropdown-content {
+    display: block;
+}
+
+/* Content section */
+.content {
+    padding: 20px;
+    background-color: #ECF0F1;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #3498DB;
+}
+
+.buy-btn {
+    padding: 10px 20px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-btn:hover {
+    background-color: #2980B9;
+}
+
+/* Footer */
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design: Mobile first approach */
+@media screen and (max-width: 768px) {
+    /* Make the menu stack vertically on mobile */
+    .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Adjust product items to take up full width */
+    .product-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Reduce the font sizes and padding for smaller screens */
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .menu a {
+        padding: 8px 10px;
+    }
+
+    .buy-btn {
+        padding: 8px 15px;
+    }
+}
+
+/* Medium Devices: Adjust for tablets */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .product-item {
+        width: 45%;
+    }
+
+    .menu li {
+        margin: 0 5px;
+    }
+}
